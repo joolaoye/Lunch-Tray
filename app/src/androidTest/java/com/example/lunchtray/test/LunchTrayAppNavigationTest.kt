@@ -88,7 +88,7 @@ class LunchTrayAppNavigationTest {
     }
 
     @Test
-    fun LunchTrayScreen_cancelButtonClickedOnSideDishMenuScreen_navigateToEntreeMenuScreen() {
+    fun LunchTrayScreen_cancelButtonClickedOnSideDishMenuScreen_navigateToStartScreen() {
         navigateToSideMenuScreen()
 
         clickCancelButton()
@@ -104,7 +104,7 @@ class LunchTrayAppNavigationTest {
     }
 
     @Test
-    fun LunchTrayScreen_backButtonClickedOnAccompanimentMenuScreen_navigateToEntreeMenuScreen() {
+    fun LunchTrayScreen_backButtonClickedOnAccompanimentMenuScreen_navigateToSideDishMenuScreen() {
         navigateToAccompanimentMenuScreen()
 
         clickBackButton()
@@ -113,7 +113,7 @@ class LunchTrayAppNavigationTest {
     }
 
     @Test
-    fun LunchTrayScreen_cancelButtonClickedOnAccompanimentMenuScreen_navigateToEntreeMenuScreen() {
+    fun LunchTrayScreen_cancelButtonClickedOnAccompanimentMenuScreen_navigateToStartScreen() {
         navigateToAccompanimentMenuScreen()
 
         clickCancelButton()
@@ -129,7 +129,7 @@ class LunchTrayAppNavigationTest {
     }
 
     @Test
-    fun LunchTrayScreen_backButtonClickedOnCheckoutScreen_navigateToEntreeMenuScreen() {
+    fun LunchTrayScreen_backButtonClickedOnCheckoutScreen_navigateToAccompanimentMenuScreen() {
         navigateToCheckoutScreen()
 
         clickBackButton()
@@ -138,7 +138,7 @@ class LunchTrayAppNavigationTest {
     }
 
     @Test
-    fun LunchTrayScreen_cancelButtonClickedOnCheckoutScreen_navigateToEntreeMenuScreen() {
+    fun LunchTrayScreen_cancelButtonClickedOnCheckoutScreen_navigateToStartScreen() {
         navigateToCheckoutScreen()
 
         clickCancelButton()
@@ -147,7 +147,7 @@ class LunchTrayAppNavigationTest {
     }
 
     @Test
-    fun LunchTrayScreen_submitButtonClickedOnCheckoutScreen_navigateToEntreeMenuScreen() {
+    fun LunchTrayScreen_submitButtonClickedOnCheckoutScreen_navigateToStartScreen() {
         navigateToCheckoutScreen()
 
         clickButton(com.example.lunchtray.R.string.submit)
