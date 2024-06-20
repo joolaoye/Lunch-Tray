@@ -10,6 +10,7 @@ import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.performClick
 import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.testing.TestNavHostController
+import com.example.lunchtray.R
 import com.example.lunchtray.LunchTrayApp
 import com.example.lunchtray.LunchTrayScreen
 import org.junit.Before
@@ -40,7 +41,7 @@ class LunchTrayAppNavigationTest {
 
     @Test
     fun LunchTrayScreen_verifyNoBackButtonOnStartScreen() {
-        val contentDescription = composeTestRule.activity.getString(com.example.lunchtray.R.string.back_button)
+        val contentDescription = composeTestRule.activity.getString(R.string.back_button)
         composeTestRule.onNodeWithContentDescription(contentDescription)
             .assertDoesNotExist()
     }
@@ -150,13 +151,13 @@ class LunchTrayAppNavigationTest {
     fun LunchTrayScreen_submitButtonClickedOnCheckoutScreen_navigateToStartScreen() {
         navigateToCheckoutScreen()
 
-        clickButton(com.example.lunchtray.R.string.submit)
+        clickButton(R.string.submit)
 
         navController.assertRouteName(LunchTrayScreen.Start.name)
     }
 
     private fun clickBackButton() {
-        val contentDescription = composeTestRule.activity.getString(com.example.lunchtray.R.string.back_button)
+        val contentDescription = composeTestRule.activity.getString(R.string.back_button)
         composeTestRule.onNodeWithContentDescription(contentDescription)
             .performClick()
     }
@@ -168,11 +169,11 @@ class LunchTrayAppNavigationTest {
     }
 
     private fun clickCancelButton() {
-        clickButton(com.example.lunchtray.R.string.cancel)
+        clickButton(R.string.cancel)
     }
 
     private fun clickNextButton() {
-        clickButton(com.example.lunchtray.R.string.next)
+        clickButton(R.string.next)
     }
 
     private fun selectOption(option : String) {
@@ -182,7 +183,7 @@ class LunchTrayAppNavigationTest {
     }
 
     private fun navigateToEntreeMenuScreen() {
-        clickButton(com.example.lunchtray.R.string.start_order)
+        clickButton(R.string.start_order)
     }
 
     private fun navigateToSideMenuScreen() {
